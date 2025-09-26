@@ -9,6 +9,7 @@
 
 
 
+
 # Flutter repo-specific
 /bin/cache/
 /bin/internal/bootstrap.bat
@@ -117,3 +118,30 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+
+# ======================================
+# PYTHON
+# ======================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.egg
+*.log
+
+# Virtual environments
+.env
+.venv/
+env/
+ENV/
+venv/
+
+# ======================================
+# GENERAL
+# ======================================
+.DS_Store
+.idea/
+.vscode/
