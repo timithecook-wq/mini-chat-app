@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app/widgets/Backgroundpattern.dart';
+import 'package:flutter_app/widgets/auth_screen_switcher.dart';
+import 'package:flutter_app/widgets/background_pattern.dart';
+import 'package:flutter_app/widgets/animated_dialog.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
 
+  @override
+  State<WelcomeScreen> createState() => _WelcomeScreenState();
+}
+
+class _WelcomeScreenState extends State<WelcomeScreen>
+    with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -51,13 +59,9 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Scaffold(
-                            body: Center(child: Placeholder()),
-                          ),
-                        ),
+                      showdropdialog(
+                        context: context,
+                        child: AuthScreenSwitcher(),
                       );
                     },
                     child: Row(
@@ -70,7 +74,7 @@ class WelcomeScreen extends StatelessWidget {
                             fontSize: 18,
                           ),
                         ),
-                        const SizedBox(width: 8),
+                        const SizedBox(width: 5),
                         Icon(Icons.arrow_right_alt, color: colors.surface),
                       ],
                     ),

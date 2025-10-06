@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/Welcome_screen.dart';
+import 'package:flutter_app/screens/welcome_screen.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter/services.dart';
 
@@ -29,8 +29,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF052659))
             .copyWith(
               surface: Color(0xFF052659),
-              onSurface: Color(0xFF3DDCF7).withOpacity(0.3),
+              onSurface: Color(0xFF3DDCF7).withValues(alpha: 0.3),
               secondary: Color(0xFFC1E8FF),
+              tertiary: Color(0xFF052659).withValues(alpha: 0.5),
             ),
         textTheme: TextTheme(
           headlineLarge: TextStyle(color: Colors.white),
