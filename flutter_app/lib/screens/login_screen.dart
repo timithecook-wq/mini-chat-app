@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/chat_screen.dart';
 import 'package:flutter_app/widgets/animated_button.dart';
 import 'package:flutter_app/widgets/input_field.dart';
 import 'package:flutter_app/widgets/pillbar.dart';
@@ -12,7 +13,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  bool _allFieldfilled = false;
+  bool _allFieldfilled = true;
   void checkfields() {
     setState(() {
       _allFieldfilled = false;
@@ -102,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (_) => Placeholder()),
+                          MaterialPageRoute(builder: (_) => ChatScreen()),
                         );
                       },
                     ),

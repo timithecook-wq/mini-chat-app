@@ -23,7 +23,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
         backgroundColor: colors.surface,
         body: Stack(
           children: [
-            PatternBackground(),
+            BackgroundPattern(),
             Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
